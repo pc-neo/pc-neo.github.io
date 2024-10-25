@@ -1,0 +1,136 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to My Space">
+	<main>
+		<div class="profile">
+			<img 
+				src="https://api.dicebear.com/7.x/adventurer/svg?seed=happy" 
+				alt="Avatar" 
+				class="avatar"
+			/>
+			<h1>Hello, I'm <span class="text-gradient">Your Name</span> 👋</h1>
+		</div>
+
+		<div class="card">
+			<h2>About Me 🌟</h2>
+			<p>
+				Frontend developer who loves creating beautiful user experiences.
+				When I'm not coding, you'll find me exploring new technologies
+				and drinking too much coffee ☕
+			</p>
+		</div>
+
+		<div class="grid">
+			<div class="card">
+				<h2>What I Do 💻</h2>
+				<ul>
+					<li>Frontend Development</li>
+					<li>UI/UX Design</li>
+					<li>Web Animation</li>
+				</ul>
+			</div>
+
+			<div class="card">
+				<h2>Find Me 🔍</h2>
+				<div class="social-links">
+					<a href="https://github.com/yourusername" target="_blank">GitHub</a>
+					<a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+					<a href="mailto:your@email.com">Email</a>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: #2c3e50;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+
+	.profile {
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.avatar {
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		margin-bottom: 1rem;
+		border: 4px solid #fff;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	}
+
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+	}
+
+	.text-gradient {
+		background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 1.5rem;
+		margin-top: 2rem;
+	}
+
+	.card {
+		background: white;
+		padding: 1.5rem;
+		border-radius: 15px;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		transition: transform 0.2s ease;
+	}
+
+	.card:hover {
+		transform: translateY(-5px);
+	}
+
+	h2 {
+		color: #FF6B6B;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+	}
+
+	ul {
+		list-style-type: none;
+		padding: 0;
+	}
+
+	li {
+		margin-bottom: 0.5rem;
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.social-links a {
+		text-decoration: none;
+		color: #4ECDC4;
+		font-weight: 600;
+		transition: color 0.2s ease;
+	}
+
+	.social-links a:hover {
+		color: #FF6B6B;
+	}
+</style>
